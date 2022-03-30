@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import {Button, Form, Icon, Input, message} from 'antd';
 import './login.less'
-import logo from './images/logo.webp'
+import logo from '../../assets/images/logo.webp'
 import {reqLogin} from "../../api";
 import memoryUtils from "../../utils/memoryUtils";
 import storageUtils from "../../utils/storageUtils";
@@ -39,7 +39,7 @@ class Login extends Component {
         // 如果用户已经登录，自动跳转到管理界面
         const user = memoryUtils.user;
         if (user&&user._id){
-            return <Redirect to='/'/>
+            return <Redirect to='/home'/>
         }
 
 
@@ -91,7 +91,6 @@ class Login extends Component {
 
 /**
  * 包装Form组件生成一个新的组件Form(Login)  传递给子组件Login一个强大的对象form
- * @type {ConnectedComponentClass<Login, Omit<FormComponentProps<any>, keyof WrappedFormInternalProps>>}
  */
 const WrappedLogin = Form.create({ name: 'normal_login' })(Login);
 export default WrappedLogin

@@ -280,7 +280,7 @@
         显示/隐藏: showStatus状态为2/0
         
     2). 功能
-        父组(Category)件得到子组件(AddForm)的数据(form)
+        父组(Product)件得到子组件(AddForm)的数据(form)
         调用更新分类的接口
         重新获取分类列表
         
@@ -293,7 +293,7 @@
         显示/隐藏: showStatus状态为1/0
         
     2). 功能
-        父组(Category)件得到子组件(AddForm)的数据(form)
+        父组(Product)件得到子组件(AddForm)的数据(form)
         调用添加分类的接口
         重新获取分类列表
 

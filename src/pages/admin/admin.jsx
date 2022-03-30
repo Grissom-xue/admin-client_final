@@ -1,11 +1,20 @@
 import React, {Component} from 'react';
 import memoryUtils from "../../utils/memoryUtils";
-import {Redirect} from "react-router-dom";
+import {Redirect, Route, Switch} from "react-router-dom";
 import { Layout } from 'antd';
-import RHeader from "../../conponents/header/header";
+import Header from "../../conponents/header/header";
 import LeftNav from "../../conponents/left-nav/left-nav";
+import Home from "../home/home";
+import Category from "../category/category";
+import Bar from "../chars/bar";
+import Line from "../chars/line";
+import Pie from "../chars/pie";
+import Role from "../role/role";
+import User from "../user/User";
+import Product from "../product/product";
 
-const { Header, Footer, Sider, Content } = Layout;
+
+const { Footer, Sider, Content } = Layout;
 
 class Admin extends Component {
     render() {
@@ -16,13 +25,26 @@ class Admin extends Component {
         }
         return (
             <Layout style={{height: '100%'}}>
-                <Sider>
-                    <LeftNav/>
-                </Sider>
+                <Sider><LeftNav/></Sider>
                 <Layout>
-                    <Header><RHeader/></Header>
-                    <Content style={{backgroundColor: "palegreen"}}>Content</Content>
-                    <Footer style={{backgroundColor: "blue"}} >推荐使用谷歌浏览器，可以获得最佳使用体验</Footer>
+                    {/*子组件写法比较特别*/}
+                    <Header>Header</Header>
+                    <Content>
+                        {/*<BrowserRouter>*/}
+                            <Switch> {/*只匹配其中一个*/}
+                                <Route path='/home' component={Home}/>
+                                <Route path='/role' component={Role}/>
+                                <Route path='/user' component={User}/>
+                                <Route path='/category' component={Category}/>
+                                <Route path='/product' component={Product}/>
+                                <Route path='/charts/bar' component={Bar}/>
+                                <Route path='/charts/line' component={Line}/>
+                                <Route path='/charts/pie' component={Pie}/>
+                                <Redirect to='/home'/>
+                            </Switch>
+                        {/*</BrowserRouter>*/}
+                    </Content>
+                    <Footer style={{textAlign: 'center',color: '#ccc',backgroundColor: '#000D17'}} >推荐使用谷歌浏览器，可以获得最佳使用体验</Footer>
                 </Layout>
             </Layout>
         );

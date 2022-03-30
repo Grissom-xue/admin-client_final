@@ -29,6 +29,11 @@
   resolved "https://registry.npmmirror.com/@ant-design/css-animation/-/css-animation-1.7.3.tgz"
   integrity sha512-LrX0OGZtW+W6iLnTAqnTaoIsRelYeuLZWsrmBJFUXDALQphPsN8cE5DCsmoSlL0QYb94BQxINiuS70Ar/8BNgA==
 
+"@ant-design/dark-theme@^2.0.2":
+  version "2.0.2"
+  resolved "https://registry.npmmirror.com/@ant-design/dark-theme/-/dark-theme-2.0.2.tgz#90de9b78b68fdbb577be629a45d39eca3f06d6e9"
+  integrity sha512-wDzyDA8hky26PKMZ2pcqGq1rfprObGRbZcdh8C+aYH9JA7dzeQvKJ5CctOdjQKl/YyyR7HW5nFUcZfNOayfORw==
+
 "@ant-design/icons-react@~2.0.1":
   version "2.0.1"
   resolved "https://registry.npmmirror.com/@ant-design/icons-react/-/icons-react-2.0.1.tgz"
