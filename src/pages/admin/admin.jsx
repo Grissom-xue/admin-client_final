@@ -26,23 +26,21 @@ class Admin extends Component {
         return (
             <Layout style={{height: '100%'}}>
                 <Sider><LeftNav/></Sider>
-                <Layout>
+                <Layout style={{backgroundColor: "#000D17"}}>
                     {/*子组件写法比较特别*/}
                     <Header>Header</Header>
-                    <Content>
-                        {/*<BrowserRouter>*/}
-                            <Switch> {/*只匹配其中一个*/}
-                                <Route path='/home' component={Home}/>
-                                <Route path='/role' component={Role}/>
-                                <Route path='/user' component={User}/>
-                                <Route path='/category' component={Category}/>
-                                <Route path='/product' component={Product}/>
-                                <Route path='/charts/bar' component={Bar}/>
-                                <Route path='/charts/line' component={Line}/>
-                                <Route path='/charts/pie' component={Pie}/>
-                                <Redirect to='/home'/>
-                            </Switch>
-                        {/*</BrowserRouter>*/}
+                    <Content style={{backgroundColor: "#001528", margin: "15px", color: "#ccc"}}>
+                        <Switch> {/*只匹配其中一个*/}
+                            <Route path='/home' component={Home}/>
+                            <Route path='/role' component={Role}/>
+                            <Route path='/user' component={User}/>
+                            <Route path='/category' component={Category}/>
+                            <Route path='/product' component={Product}/>
+                            <Route path='/charts/bar' component={Bar}/>
+                            <Route path='/charts/line' component={Line}/>
+                            <Route path='/charts/pie' component={Pie}/>
+                            <Redirect to='/home'/>
+                        </Switch>
                     </Content>
                     <Footer style={{textAlign: 'center',color: '#ccc',backgroundColor: '#000D17'}} >推荐使用谷歌浏览器，可以获得最佳使用体验</Footer>
                 </Layout>
