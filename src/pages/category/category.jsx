@@ -44,7 +44,8 @@ export default class Category extends Component {
     showCategory = () => {
         this.setState({
             parentId:"0",
-            parentName:[]
+            parentName:[],
+            subCategories:[]
         },() => {
             //状态更新且重新render后执行
             this.getCategory()
